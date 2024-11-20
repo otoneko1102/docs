@@ -1,6 +1,6 @@
-const list = document.getElementById('ca-list');
+const caList = document.getElementById('ca-list');
 
-if (list) {
+if (caList) {
   (async () => {
     try {
       const links = await fetchJson('/catalunya/links.json');
@@ -12,7 +12,7 @@ if (list) {
         a.target = '_blank';
 
         li.appendChild(a);
-        list.appendChild(li);
+        caList.appendChild(li);
       }
     } catch (e) {
       console.error(e);
