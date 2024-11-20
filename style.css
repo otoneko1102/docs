@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+body {
+  color: #ffffff;
+  background-color: #000000;
+  font-family: 'Kiwi Maru', sans-serif;
+  margin: 0;
+  padding: 40px;
+}
+
+p {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  width: 400px;
+  max-width: 80%;
+}
+
+a {
+  text-decoration: none;
+  color: #00bfff;
+}
+
+a:hover {
+  color: #008bbb;
+  transform: scale(1.1);
+}
+
+footer {
+  font-size: 10px;
+  display: block;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: #3d3d3d;
+  color: #ffffff;
+  text-align: center;
+  padding: 3px 0;
+  z-index: 9999;
+}
+
+.section-border {
+  margin-top: 30px;
+  height: 20px;
+  background-image: radial-gradient(circle, #ffffff 1px, transparent 1px);
+  background-size: 5px 5px;
+}
+
+#line {
+  padding: 0;
+}
+
+.typing::after {
+  content: '▎';
+  display: inline;
+  animation: blink 0.75s step-start infinite;
+}
+
+.no-cursor::after {
+  display: none;
+}
+
+.home {
+  width: 150px;
+}
+
+.author {
+  position: fixed;
+  background-color: #3d3d3d;
+  color: #ffffff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+.list {
+  font-size: 20px;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.list a {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.list a::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('/img/svg/link_w.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 4px;
+  filter: brightness(0) saturate(100%) invert(60%) sepia(11%) saturate(2917%) hue-rotate(176deg) brightness(110%) contrast(80%);
+}
+
+.list a:hover::after {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(11%) saturate(2917%) hue-rotate(176deg) brightness(80%) contrast(80%);
+}
+
+.ca-link::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('/img/svg/flag_catalunya.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+}
+
+.ca-link:hover::before {
+  transform: scale(1.1);
+  filter: brightness(80%);
+}
+
+.selfy {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+  align-items: center;
+}
+
+.center {
+  text-align: center;
+}
+
+#bio {
+  line-height: 2.5;
+}
+
+#links-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+#links-list li {
+  background-color: #00bfff;
+  color: #ffffff;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  min-width: 250px;
+  flex: 0 1 calc(33.33% - 20px);
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#links-list li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#links-list a::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('/img/svg/link_w.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 4px;
+}
+
+#links-list li:hover {
+  background-color: #008bbb;
+}
+
+#notfound {
+  padding-top: 30px;
+}
+
+#notfound p {
+  margin-top: 0;
+}
+
+#notfound .status-cat {
+  width: 45%;
+  min-width: 400px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 75px;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  body {
+    padding: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .section-border {
+    margin-top: 50px;
+  }
+
+  .home {
+    width: 90px;
+  }
+
+  .author {
+    height: 40px;
+  }
+
+  .list {
+    font-size: 12px;
+    padding: 0;
+    padding-right: 2px;
+  }
+
+  .list a {
+    font-size: 12px;
+    padding: 3px;
+  }
+
+  .list a::after {
+    width: 15px;
+    height: 15px;
+  }
+
+  .ca-link::before {
+    width: 10px;
+    height: 10px;
+    margin-right: 2px;
+  }
+
+  #links-list li {
+    min-width: 300px;
+  }
+}
