@@ -30,6 +30,12 @@ async function fetchText(path) {
   return data;
 };
 
+const fakeLink = document.getElementById("ca-fake");
+if (fakeLink) {
+  fakeLink.remove();
+  meowLog('Successfully removed!')
+}
+
 const bio = document.getElementById('bio');
 
 if (bio) {
